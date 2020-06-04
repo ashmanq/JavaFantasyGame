@@ -1,4 +1,4 @@
-package spells;
+package behaviors;
 
 import enemies.Enemy;
 

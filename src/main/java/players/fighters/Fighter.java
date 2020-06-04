@@ -2,7 +2,7 @@ package players.fighters;
 
 import enemies.Enemy;
 import players.Player;
-import weapons.IWeapon;
+import behaviors.IWeapon;
 
 public abstract class Fighter extends Player {
 

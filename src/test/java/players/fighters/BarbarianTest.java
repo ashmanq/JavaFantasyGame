@@ -1,20 +1,20 @@
-package players;
+package players.fighters;
 
 import enemies.Enemy;
 import enemies.Orc;
 import org.junit.Before;
 import org.junit.Test;
-import players.fighters.Dwarf;
+import players.fighters.Barbarian;
 import weapons.Club;
-import weapons.IWeapon;
+import behaviors.IWeapon;
 import weapons.Sword;
 import weapons.Weapon;
 
 import static org.junit.Assert.assertEquals;
 
-public class DwarfTest {
+public class BarbarianTest {
 
-    private Dwarf dwarf;
+    private Barbarian barbarian;
     private Enemy enemy;
     private IWeapon weapon1, weapon2;
 
@@ -23,37 +23,36 @@ public class DwarfTest {
         weapon1 = new Sword("Stabby", 25);
         weapon2 = new Club("Smashy", 50);
         enemy = new Orc(60);
-        dwarf = new Dwarf("Hector", 100, weapon1);
+        barbarian = new Barbarian("Conan", 100, weapon1);
     }
 
     @Test
     public void hasName(){
-        assertEquals("Hector", dwarf.getName());
+        assertEquals("Conan", barbarian.getName());
     }
 
     @Test
     public void hasHealthPoints(){
-        assertEquals(100, dwarf.getHealthPoints());
+        assertEquals(100, barbarian.getHealthPoints());
     }
 
     @Test
     public void hasWeapon(){
-        Weapon weapon = (Weapon) dwarf.getWeapon();
+        Weapon weapon = (Weapon) barbarian.getWeapon();
         assertEquals("Stabby", weapon.getName());
     }
 
     @Test
     public void canAttackEnemy(){
-        dwarf.attack(enemy);
+        barbarian.attack(enemy);
         assertEquals(35, enemy.getHealthPoints());
     }
 
     @Test
     public void canChangeWeapon(){
-        dwarf.changeWeapon(weapon2);
-        Weapon weapon = (Weapon) dwarf.getWeapon();
+        barbarian.changeWeapon(weapon2);
+        Weapon weapon = (Weapon) barbarian.getWeapon();
         assertEquals("Smashy", weapon.getName());
     }
-
 
 }

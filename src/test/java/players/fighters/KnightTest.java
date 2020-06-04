@@ -1,4 +1,4 @@
-package players;
+package players.fighters;
 
 import enemies.Enemy;
 import enemies.Orc;
@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import players.fighters.Knight;
 import weapons.Club;
-import weapons.IWeapon;
+import behaviors.IWeapon;
 import weapons.Sword;
 import weapons.Weapon;
 

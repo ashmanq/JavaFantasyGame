@@ -1,8 +1,9 @@
 package spells;
 
+import behaviors.ISpell;
 import enemies.Enemy;
 
-public class IceBlast implements ISpell{
+public class IceBlast implements ISpell {
 
     private int damage;
     private String incantation;

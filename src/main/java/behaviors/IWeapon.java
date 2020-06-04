@@ -1,4 +1,4 @@
-package weapons;
+package behaviors;
 
 import enemies.Enemy;
 

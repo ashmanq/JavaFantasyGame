@@ -1,6 +1,6 @@
 package players.fighters;
 
-import weapons.IWeapon;
+import behaviors.IWeapon;
 
 public class Dwarf extends Fighter{
 

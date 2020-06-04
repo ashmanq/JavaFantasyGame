@@ -1,5 +1,6 @@
 package weapons;
 
+import behaviors.IWeapon;
 import enemies.Enemy;
 
 public abstract class Weapon implements IWeapon {

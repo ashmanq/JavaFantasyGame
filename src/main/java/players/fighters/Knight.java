@@ -1,7 +1,6 @@
 package players.fighters;
 
-import weapons.IWeapon;
-import weapons.Weapon;
+import behaviors.IWeapon;
 
 public class Knight extends Fighter{
 
