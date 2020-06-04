@@ -4,7 +4,7 @@ import enemies.Enemy;
 import enemies.Orc;
 import org.junit.Before;
 import org.junit.Test;
-import players.fighters.Knight;
+import players.fighters.Dwarf;
 import weapons.Club;
 import weapons.IWeapon;
 import weapons.Sword;
@@ -12,9 +12,9 @@ import weapons.Weapon;
 
 import static org.junit.Assert.assertEquals;
 
-public class KnightTest {
+public class DwarfTest {
 
-    private Knight knight;
+    private Dwarf dwarf;
     private Enemy enemy;
     private IWeapon weapon1, weapon2;
 
@@ -23,36 +23,37 @@ public class KnightTest {
         weapon1 = new Sword("Stabby", 25);
         weapon2 = new Club("Smashy", 50);
         enemy = new Orc(60);
-        knight = new Knight("Sir Stabs Alot", 100, weapon1);
+        dwarf = new Dwarf("Hector", 100, weapon1);
     }
 
     @Test
     public void hasName(){
-        assertEquals("Sir Stabs Alot", knight.getName());
+        assertEquals("Hector", dwarf.getName());
     }
 
     @Test
     public void hasHealthPoints(){
-        assertEquals(100, knight.getHealthPoints());
+        assertEquals(100, dwarf.getHealthPoints());
     }
 
     @Test
     public void hasWeapon(){
-        Weapon weapon = (Weapon) knight.getWeapon();
+        Weapon weapon = (Weapon) dwarf.getWeapon();
         assertEquals("Stabby", weapon.getName());
     }
 
     @Test
     public void canAttackEnemy(){
-        knight.attack(enemy);
+        dwarf.attack(enemy);
         assertEquals(35, enemy.getHealthPoints());
     }
 
     @Test
     public void canChangeWeapon(){
-        knight.changeWeapon(weapon2);
-        Weapon weapon = (Weapon) knight.getWeapon();
+        dwarf.changeWeapon(weapon2);
+        Weapon weapon = (Weapon) dwarf.getWeapon();
         assertEquals("Smashy", weapon.getName());
     }
+
 
 }
