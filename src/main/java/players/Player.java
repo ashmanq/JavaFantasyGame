@@ -6,9 +6,9 @@ public abstract class Player {
     private int healthPoints;
     private int maxHealth;
 
-    public Player(String name, int healthPoints, int maxHealth) {
+    public Player(String name, int maxHealth) {
         this.name = name;
-        this.healthPoints = healthPoints;
+        this.healthPoints = maxHealth;
         this.maxHealth = maxHealth;
     }
 
