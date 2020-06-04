@@ -55,4 +55,17 @@ public class KnightTest {
         assertEquals("Smashy", weapon.getName());
     }
 
+    @Test
+    public void canTakeDamage(){
+        knight.takeDamage(20);
+        assertEquals(80, knight.getHealthPoints());
+    }
+
+    @Test
+    public void canHeal(){
+        knight.takeDamage(20);
+        knight.heal(10);
+        assertEquals(90, knight.getHealthPoints());
+    }
+
 }
